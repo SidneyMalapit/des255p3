@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>...</title>
+    <script defer type="module" src="/src/main.ts"></script>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/welcome.css">
+  </head>
+  <body>
+    <button id="get-results">submit</button>
+    <section id="welcome-modal" class="in-use">
+      <h1>before you start</h1>
+      <ul>
+        <li>i don't expect you to fill out each question!</li>
+        <li>but do try to fill out the quiz uniformly<br>(throughout the page, not just up/down or left/right)</li>
+        <li>you shouldn't take more than 2 seconds on each question<br>(you could, but there's just too many)</li>
+        <li>identify yourself: <input id="identification" type="text" maxlength="30"></li>
+      </ul>
+      <button id="close-welcome-modal">begin</button>
+    </section>
+    <main id="app" class="use-column"></main>
+  </body>
+</html>
