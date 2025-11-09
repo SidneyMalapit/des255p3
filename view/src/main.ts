@@ -1,4 +1,4 @@
-//import './style.css';
+import './style.css';
 import {
   Question,
   FreeResponseQuestion,
@@ -21,7 +21,7 @@ const words = (await fetch('/common_words.txt').then((res) => res.text()))
 .split('\n')
 .filter((word) => word.length < 10);
 
-for (let i = 0; i < 85; i++) {
+for (let i = 0; i < 81; i++) {
   const prob = gen();
 
   const prompt = genRandomPhrase(gen, scale(gen(), 100, true) * 7 + 1);
