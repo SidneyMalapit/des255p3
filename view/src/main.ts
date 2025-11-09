@@ -1,4 +1,4 @@
-import './style.css';
+import '/src/style.css';
 import {
   Question,
   FreeResponseQuestion,
