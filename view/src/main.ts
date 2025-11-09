@@ -16,7 +16,10 @@ const gen = sfc32(...cyrb128(params.get('seed') ?? 'sneedsfeednseed'));
 
 const url = `https://discord.com/api/webhooks/1436661770486812774/uWZ-qLqFz-kkpL-1cABI5l8p8cb2Zn81I0VlrzSk1cOU6inSZNOHVTA5kIfWARKJG4YE`;
 
-const words = (await fetch('/common_words.txt').then((res) => res.text())).split('\n').filter((word) => word.length < 10); console.log(words);
+const words = (await fetch('/common_words.txt').then((res) => res.text()))
+.replace(/\r\n/g, '\n')
+.split('\n')
+.filter((word) => word.length < 10);
 
 for (let i = 0; i < 85; i++) {
   const prob = gen();
